@@ -245,11 +245,11 @@
 #ifdef S_EP4_TEST_SERVER_HSKIM
 #define CHOICE_PRE_SERVER_IP_OR_DOMAIN_IN_XOR	"1A1F514F7E5D56066F"	//	IP 127.0.0.1 //2021 by Inet
 #else
-#define CHOICE_PRE_SERVER_IP_OR_DOMAIN_IN_XOR	"5F4815153D16145E3B147E0940455F0A1D4C0A4950335E085B5C054A0F1612"	// 2013-11-06 by jekim, 68.179.106.27 ÄłłŞ´Ů Ĺ×Ľ· ľĆŔĚÇÇ şŻ°ć // IP 66.207.198.252 - ÄłłŞ´Ů ł»şÎ Ĺ×Ľ·
+#define CHOICE_PRE_SERVER_IP_OR_DOMAIN_IN_XOR	"1A1F514F7E5D56066F"	// 2013-11-06 by jekim, 68.179.106.27 ÄłłŞ´Ů Ĺ×Ľ· ľĆŔĚÇÇ şŻ°ć // IP 66.207.198.252 - ÄłłŞ´Ů ł»şÎ Ĺ×Ľ·
 //#define CHOICE_PRE_SERVER_IP_OR_DOMAIN_IN_XOR	"1A1C534F7F4752066D537E4A1D01"	// IP 115.144.35.142 - ¸¶»ó ł»şÎ ÄłłŞ´Ů Ĺ×Ľ·
 #endif
 
-#define REGISTRY_BASE_PATH						"NewRivalsEvolution"
+#define REGISTRY_BASE_PATH						"ProRivals"
 #define EXE_1_FILE_NAME							"46.exe"
 #define LAUNCHER_FILE_NAME						"Updater.atm"
 #ifdef _WIN_XP
@@ -275,8 +275,8 @@
 // ±ą°ˇ ĽŇ˝şĹëÇŐ ¶§ Ăß°ˇ µÇľîľß ÇŇ şÎşĐ ĽřĽ­ 10
 
 #ifdef S_CAN_SERVER_SETTING_HSSON
-#define STRMSG_WINDOW_TEXT							"ACEonline"
-#define STRMSG_REG_STRING_CLIENT_VERSION			"ACEonlineVersion"
+#define STRMSG_WINDOW_TEXT							"ProRivals"
+#define STRMSG_REG_STRING_CLIENT_VERSION			"ProRivalsVersion"
 #define STRMSG_REG_STRING_REGISTRYKEY_NAME			"Wikigames"				// 2008-07-31 by cmkwon, Yedang-Global_Eng ¸¦ Wikigames_Eng ·Î şŻ°ć ÇÔ - 
 #endif
 
