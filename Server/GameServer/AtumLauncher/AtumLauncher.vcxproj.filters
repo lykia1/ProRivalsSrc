@@ -136,6 +136,9 @@
     <ClInclude Include="AtumLauncher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ProRivalsSkin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="AtumLauncherDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>

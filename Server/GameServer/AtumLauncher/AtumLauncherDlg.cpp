@@ -158,7 +158,7 @@ CAtumLauncherDlg::CAtumLauncherDlg(CWnd* pParent /*=NULL*/)
 //	m_pFieldWinsocket = 0;
 	m_bControlEnabled = TRUE;
 
-	m_StaticBrushBlack.CreateSolidBrush(RGB(0, 0, 0));
+	m_StaticBrushBlack.CreateSolidBrush(RGB(9, 16, 26));
 	m_StaticBrushGray.CreateSolidBrush(RGB(23, 23, 23));
 	m_ListBrushGray.CreateSolidBrush(RGB(212, 208, 200));
 	
@@ -170,11 +170,11 @@ CAtumLauncherDlg::CAtumLauncherDlg(CWnd* pParent /*=NULL*/)
 #if defined(SERVICE_TYPE_RUSSIAN_SERVER_1)		// 러시아 런처 인터페이스 수정
 	m_listBrush.CreateStockObject(NULL_BRUSH);
 #else
-	m_listBrush.CreateSolidBrush(RGB(29,29,40));
+	m_listBrush.CreateSolidBrush(RGB(16,26,39));
 #endif
 	// end 2008-12-17 by ckPark 러시아 런쳐
 */
-	m_listBrush.CreateSolidBrush(RGB(29,29,40));
+	m_listBrush.CreateSolidBrush(RGB(16,26,39));
 
 
 
@@ -593,8 +593,8 @@ BOOL CAtumLauncherDlg::OnInitDialog()
 #if defined(SERVICE_TYPE_RUSSIAN_SERVER_1)		// 러시아 런처 인터페이스 수정
 		this->InsertWindowDegreeList(pComboBox, m_ctrlCheckWindowMode.GetCheck());
 		m_ctrlComboWindowDegree.SetBitMap(IDB_COMBOBOX);
-		m_ctrlComboWindowDegree.SetTextColor(RGB(18, 236, 218));
-		m_ctrlComboWindowDegree.SetBackColor(RGB(0, 0, 0));
+		m_ctrlComboWindowDegree.SetTextColor(RGB(31, 203, 199));
+		m_ctrlComboWindowDegree.SetBackColor(RGB(9, 16, 26));
 #else
 		this->InsertWindowDegreeList(pComboBox, this->IsWindowedGameMode());
 #endif
@@ -828,8 +828,8 @@ BOOL CAtumLauncherDlg::OnInitDialog()
 	// 2008-12-17 by ckPark 러시아 런쳐
 #if defined(SERVICE_TYPE_RUSSIAN_SERVER_1)		// 러시아 런처 인터페이스 수정
 	// 러시아는 프로그래스 바 색깔이 다르다
-	m_progressCtrl.SetBkColor(RGB(0, 0, 0));
-	m_progressCtrl.SetGradientColors(RGB(18, 236, 218), RGB(18, 236, 218));
+	m_progressCtrl.SetBkColor(RGB(9, 16, 26));
+	m_progressCtrl.SetGradientColors(RGB(31, 203, 199), RGB(31, 203, 199));
 */
 
 
@@ -1009,6 +1009,10 @@ BOOL CAtumLauncherDlg::OnInitDialog()
 	memDCBackGround.BitBlt(0, EXE2_BG_TITLE_BAR_SIZE_Y,EXE2_BG_BACKGROUND_IMAGE_SIZE_X, EXE2_BG_BACKGROUND_IMAGE_SIZE_Y,&tmMemDC,0,0,SRCPAINT);			
 	tmMemDC.SelectObject(pTmOldBitmap);
 	tmBitmap.DeleteObject();
+
+#if defined(S_LAUNCHER_USE_ID_PASSWORD_HSKIM)
+	ProRivalsSkin::Background(memDCBackGround);
+#endif
 
 	memDCBackGround.SelectObject(pOldBitmapBackGround);
 
@@ -1563,7 +1567,7 @@ void CAtumLauncherDlg::OnPaint()
 
 			
 
-		CDialog::OnPaint();
+		dcMem.SelectObject(OldBitmap);
 	}
 }
 
@@ -3892,7 +3896,7 @@ int CAtumLauncherDlg::DrawProgressBar()
 	MemDC.FillRect(&ProRect, &BlueBrush);
 
 	MemDC.SetBkMode(TRANSPARENT);
-	MemDC.SetTextColor(RGB(0, 0, 0));
+	MemDC.SetTextColor(RGB(9, 16, 26));
 	MemDC.GetTextMetrics(&TextMetric);
 
 	wsprintf(Junk, "%d%%", m_Cur_Percent);
@@ -3958,7 +3962,7 @@ HBRUSH CAtumLauncherDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 				|| (GetDlgItem(IDC_EDIT_PASSWORD)->m_hWnd == pWnd->m_hWnd))
 			{
 				pDC->SetBkMode(TRANSPARENT);
-				pDC->SetBkColor(RGB(0, 0, 0));
+				pDC->SetBkColor(RGB(9, 16, 26));
 				pDC->SetTextColor(RGB(255, 255, 255));
 				return m_StaticBrushBlack;
 			}
@@ -3982,7 +3986,7 @@ HBRUSH CAtumLauncherDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 			else if(GetDlgItem(IDC_CHARACTER_NAME)->m_hWnd == pWnd->m_hWnd )
 			{
 				pDC->SetBkMode(TRANSPARENT);
-				pDC->SetBkColor(RGB(0, 0, 0));
+				pDC->SetBkColor(RGB(9, 16, 26));
 				pDC->SetTextColor(RGB(255, 255, 255));
 				return m_StaticBrushGray;
 			}
@@ -4004,7 +4008,7 @@ HBRUSH CAtumLauncherDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 			if(GetDlgItem(IDC_LIST)->m_hWnd == pWnd->m_hWnd )
 			{
 				pDC->SetBkMode(TRANSPARENT);
-				pDC->SetBkColor(RGB(29, 29, 40));
+				pDC->SetBkColor(RGB(16, 26, 39));
 				pDC->SetTextColor(RGB(189,194,198));
 				return m_listBrush;
 			}
