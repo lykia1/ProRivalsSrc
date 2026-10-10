@@ -550,3 +550,8 @@ LANGUAGE 9, 1
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
 
+
+// Launcher-only assets; outside pre-build localization copy paths.
+IDB_AIRRIVALS_SCENE BITMAP "res\\AIRRIVALS\\LauncherScene.bmp"
+IDR_AIRRIVALS_LOGO RCDATA "res\\AIRRIVALS\\Logo.png"
+IDR_AIRRIVALS_NEWS RCDATA "res\\AIRRIVALS\\NewsArtwork.jpg"

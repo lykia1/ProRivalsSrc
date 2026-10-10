@@ -702,7 +702,10 @@ BOOL CAtumLauncherDlg::OnInitDialog()
 	//m_pHost		= new Host(m_hWnd,strWebAddress,NULL,NULL,NULL, &rt);
 	// 일본은 웹페이지를 안보여주므로 아예 Host생성 안함
 #if !defined(SERVICE_TYPE_JAPANESE_SERVER_1)
-	m_pHost		= new Host(m_hWnd,strWebAddress,NULL,NULL,NULL, &rt);
+	// An empty news address otherwise opens a white about:blank browser.
+	// Keep the existing browser unchanged for any configured remote address.
+	if (strWebAddress[0] != '\0')
+		m_pHost = new Host(m_hWnd,strWebAddress,NULL,NULL,NULL, &rt);
 #endif
 	// end 2008-12-23 by ckPark 일본 런쳐
 
@@ -842,7 +845,8 @@ BOOL CAtumLauncherDlg::OnInitDialog()
 	// end 2008-12-23 by ckPark 일본 런쳐
 
 
-	m_progressCtrl.SetGradientColors(RGB(255, 0, 0), RGB(0, 0, 255));
+	m_progressCtrl.SetBkColor(RGB(5, 16, 27));
+	m_progressCtrl.SetGradientColors(RGB(41, 101, 144), RGB(114, 206, 238));
 #endif
 	// end 2008-12-17 by ckPark 러시아 런쳐
 
@@ -1011,7 +1015,7 @@ BOOL CAtumLauncherDlg::OnInitDialog()
 	tmBitmap.DeleteObject();
 
 #if defined(S_LAUNCHER_USE_ID_PASSWORD_HSKIM)
-	ProRivalsSkin::Background(memDCBackGround);
+	AirRivalsSkin::Background(memDCBackGround);
 #endif
 
 	memDCBackGround.SelectObject(pOldBitmapBackGround);

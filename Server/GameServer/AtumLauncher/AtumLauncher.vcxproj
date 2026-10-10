@@ -245,7 +245,7 @@ xcopy .\res\WIKIGAMES_ENG .\res /Y /Q</Command>
     <ClInclude Include="..\..\..\Common\IExplore.h" />
     <ClInclude Include="..\..\..\Common\ListBoxEBX.h" />
     <ClInclude Include="AtumLauncher.h" />
-    <ClInclude Include="ProRivalsSkin.h" />
+    <ClInclude Include="AirRivalsSkin.h" />
     <ClInclude Include="AtumLauncherDlg.h" />
     <ClInclude Include="DlgGuardAgreement.h" />
     <ClInclude Include="IExplore.h" />
@@ -442,4 +442,9 @@ xcopy .\res\WIKIGAMES_ENG .\res /Y /Q</Command>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ItemGroup>
+    <Image Include="res\AIRRIVALS\LauncherScene.bmp" />
+    <Image Include="res\AIRRIVALS\Logo.png" />
+    <Image Include="res\AIRRIVALS\NewsArtwork.jpg" />
+  </ItemGroup>
 </Project>

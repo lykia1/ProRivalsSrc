@@ -136,7 +136,7 @@
     <ClInclude Include="AtumLauncher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ProRivalsSkin.h">
+    <ClInclude Include="AirRivalsSkin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AtumLauncherDlg.h">
@@ -741,5 +741,10 @@
     <CustomBuild Include="res\AtumLauncher.rc2">
       <Filter>Resource Files</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AIRRIVALS\LauncherScene.bmp" />
+    <Image Include="res\AIRRIVALS\Logo.png" />
+    <Image Include="res\AIRRIVALS\NewsArtwork.jpg" />
   </ItemGroup>
 </Project>

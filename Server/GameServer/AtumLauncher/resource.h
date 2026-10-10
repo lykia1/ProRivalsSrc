@@ -238,3 +238,8 @@
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
+
+// AirRivals website branding and launcher artwork
+#define IDB_AIRRIVALS_SCENE 5001
+#define IDR_AIRRIVALS_LOGO 5002
+#define IDR_AIRRIVALS_NEWS 5003
