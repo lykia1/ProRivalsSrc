@@ -13,6 +13,7 @@
 #include "resource.h"
 #include "ProgressCtrlX.h"
 #include "KbcButton.h"
+#include "ProRivalsSkin.h"
 #include "ListBoxEBX.h"
 #include "comboboxebx.h"
 #include "IExplore.h"
@@ -83,13 +84,13 @@ public:
 
 
 	// 2004-07-05, cmkwon
-	CBitmapButton		m_bitmapBtnCancel;
-	CBitmapButton		m_bitmapBtnMin;
-	CBitmapButton		m_bmpBtnHomepage;		// 2007-09-27 by cmkwon, Homepage가기 버튼 추가(베트남 VTC-Intecom 요청) - 멤버 변수 추가
+	CProRivalsChromeButton		m_bitmapBtnCancel;
+	CProRivalsChromeButton		m_bitmapBtnMin;
+	CProRivalsChromeButton		m_bmpBtnHomepage;		// 2007-09-27 by cmkwon, Homepage가기 버튼 추가(베트남 VTC-Intecom 요청) - 멤버 변수 추가
 
 
 	CBitmap				m_BackGround;
-	CKbcButton			m_KbcGO;
+	CProRivalsLaunchButton		m_KbcGO;
 	CKbcButton			m_kbcBtnJoin;
 
 	CFTPManager			*m_pUpdateFTPManager;

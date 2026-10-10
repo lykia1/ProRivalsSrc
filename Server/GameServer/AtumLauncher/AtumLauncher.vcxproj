@@ -245,6 +245,7 @@ xcopy .\res\WIKIGAMES_ENG .\res /Y /Q</Command>
     <ClInclude Include="..\..\..\Common\IExplore.h" />
     <ClInclude Include="..\..\..\Common\ListBoxEBX.h" />
     <ClInclude Include="AtumLauncher.h" />
+    <ClInclude Include="ProRivalsSkin.h" />
     <ClInclude Include="AtumLauncherDlg.h" />
     <ClInclude Include="DlgGuardAgreement.h" />
     <ClInclude Include="IExplore.h" />
