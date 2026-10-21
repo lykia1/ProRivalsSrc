@@ -28,3 +28,7 @@ Depoda `Database/acc.bak`, `db_1.bak`, `arena.bak` bulunuyor. Bunlar SQL Server 
 ## Henüz aktarılmayanlar
 
 Gerçek katalog satırları, tam hasar / enchant / skill / drop hesapları, uçuş yerine komut çözümleme, PHP/MySQL hesapları ve kalıcı görev kuyruğu, tugay/ulus savaşları ve özgün istemci görselleri. Prototipteki savaş ve eşya örnekleri bu aktarımla birebir orijinal olarak sunulmaz.
+
+## Pilot creation and nation progression
+
+See [PILOT-FLOW.md](PILOT-FLOW.md) for the persistent PHP pilot service, immutable nation selection, nation cities, and quest-gated teleportation.
