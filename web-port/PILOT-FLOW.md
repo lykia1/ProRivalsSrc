@@ -37,3 +37,22 @@ Tests: `php web-port/tests/pilot-flow.php` (PDO SQLite required). The hosted Sit
 preview uses equivalent TypeScript/D1 rules and native ChatGPT identity; it is
 not a PHP runtime. The preview keeps its existing private audience, so other
 players cannot join until the owner explicitly changes access.
+
+## Reynard strategic point
+
+Apply `migrations/002_strategic_points.sql` after the pilot migration. The new
+`StrategicPoint` PHP service provides `state($trustedAccountId)` and
+`order($trustedAccountId, $eventId)`. The optional clock argument is for tests;
+HTTP adapters must use server time, verified session identity and CSRF protection.
+`state` materializes the current scheduled event on first access; no cron is
+needed. Event results derive from persisted HP and deadline even when offline.
+
+Every 15 minutes a new 10-minute event begins with 1,000 HP. ANI attacks for up
+to 100 damage; BCU repairs up to 60 HP. There is a server-enforced 15-second
+per-pilot cooldown. Players must have unlocked Reynard through quests, be on
+map 3018 and have no active reconnaissance mission. Orders and HP effects commit
+in one transaction. ANI wins on destruction; BCU wins on expiry otherwise.
+Destroyed/expired targets cannot receive commands. This is a configurable-game
+prototype scenario: BCU is defender here, not a claim about original map ownership.
+No currency rewards, character PvP, or permanent territory transfer are included.
+Run `php web-port/tests/strategic-point.php` with PDO SQLite.
